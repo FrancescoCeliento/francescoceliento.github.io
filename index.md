@@ -1,3 +1,0 @@
-# Francesco Celiento
-
-test

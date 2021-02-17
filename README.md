@@ -1,8 +1,7 @@
 # Sito ufficiale di Francesco Celiento
 Codice sorgente del mio sito ufficiale
-* sito: www.francescoceliento.com
-* mirror: francescoceliento.github.io
-Repository del mio sito personale www.francescoceliento.com. Utilizza il template http://www.mashup-template.com/preview.html?template=univers
+* sito: https://www.francescoceliento.com
+* mirror: https://francescoceliento.github.io
 
 ## Template
 [Univers di Mashup Template](http://www.mashup-template.com/preview.html?template=univers)

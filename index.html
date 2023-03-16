@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		
 		<meta property="og:title" content="Francesco Celiento - Java/Oracle developer" />
-		<meta property="og:type" content="article" />
+		<meta property="og:type" content="website" />
 		<meta property="og:image" content="images/occupazione.jpg" />
 		<meta property="og:url" content="https://www.francescoceliento.com" />
 		<meta property="og:site_name" content="Francesco Celiento - Java/Oracle developer" />
@@ -21,6 +21,27 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="favicon.png" sizes="32x32" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<?php
+		date_default_timezone_set('Europe/Rome');
+		$year=date('Y');
+		if (isset($_GET['time'])) {
+			$now = strtotime($_GET['time']." $year");
+		} else {
+			$now=time();
+		}
+		//Background per Halloween
+		if ($now >= strtotime("29 Oct $year") && $now <= strtotime("2 Nov $year") ) {
+			echo '<style>#bg:after { background-image: url("../../images/bghalloween.jpg"); }</style>';
+		}
+		// Backgroud per Natale
+		else if ($now >= strtotime("23 Dec $year") && $now <= strtotime("27 Dec $year")) {
+			echo '<style>#bg:after { background-image: url("../../images/bgchristmas.jpg"); }</style>';
+		}
+		// Background per Capodanno
+		else if ($now >= strtotime("30 Dec $year") || $now <= strtotime("3 Jan $year")) {
+			echo '<style>#bg:after { background-image: url("../../images/bghappynewyear.jpg"); }</style>';
+		}
+		?>
 	</head>
 	<body class="is-preload">
 
@@ -41,7 +62,7 @@
 						<nav>
 							<ul>
 								<li><a href="#aboutme">Su di me</a></li>
-								<li><a href="#work">Occupazione</a></li>
+								<!--<li><a href="#work">Occupazione</a></li>-->
 								<!--<li><a href="#project">Progetti</a></li>-->
 								<!--<li><a href="#contributions">Contributi</a></li>-->
 								<li><a href="#contact">Contattami</a></li>
@@ -153,7 +174,7 @@
 							</article>
 
 						<!-- Work -->
-							<article id="work">
+							<!--<article id="work">
 								<h2 class="major">Il mio lavoro</h2>
 								<span class="image main"><img src="images/occupazione.jpg" alt="" /></span>
 								<table>
@@ -184,7 +205,7 @@
 										</tr>
 									</tbody>
 								</table>
-							</article>
+							</article>-->
 
 						<!-- Project -->
 						<!-- INIZIO PROGETTI TEMPORANEAMENTE DISABILITATI
@@ -376,8 +397,12 @@
 								
 								<section>
 									<h3 class="major">Foto</h3>
+									<p>Immagine in Su di me: <a href="https://www.pexels.com/it-it/foto/matita-nera-su-carta-bianca-68562/" target="_blank">Foto di Miguel Á. Padriñán da Pexels</a></p>
 									<p>Immagine di sfondo: <a href="https://www.pexels.com/it-it/foto/montagna-innevata-sotto-il-cielo-limpido-1054218/" target="_blank">Foto di Stephan Seeber da Pexels</a></p>
-									<p>Immagine in Su di me: <a href="https://www.pexels.com/it-it/foto/matita-nera-su-carta-bianca-68562/" target="_blank">Foto di Miguel Á. Padriñán</a></p>
+									<!--<p>Immagine in Occupazione: <a href="https://www.pexels.com/it-it/foto/uomo-in-camicia-nera-che-si-siede-davanti-al-computer-3861959/" target="_blank">Foto di ThisIsEngineering da Pexels</a></p>-->
+									<p>Immagine di sfondo di Buon Natale: <a href="https://www.pexels.com/it-it/foto/pallina-di-natale-d-oro-246351/" target="_blank">Foto di Valeria Vinnik da Pexels</a></p>
+									<p>Immagine di sfondo di Buon Anno: <a href="https://www.pexels.com/it-it/foto/scritto-a-mano-mano-tenendo-oro-6149121/" target="_blank">Foto di olia danilevich da Pexels</a></p>
+									<p>Immagine di sfondo di Buon Halloween: <a href="https://www.pexels.com/it-it/foto/due-lampade-jack-o-lantern-619418/" target="_blank">Foto di Toni Cuenca da Pexels</a></p>
 								</section>
 							</article>
 
